@@ -47,5 +47,9 @@
 @media screen and (max-width: 1000px) {
     .button {
         width: 253px;
+
+        &.send {
+            width: 100%;
+        }
     }
 }

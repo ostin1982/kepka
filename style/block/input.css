@@ -109,6 +109,9 @@
   }
 }
 @media screen and (max-width: 1000px) {
+  .input {
+    max-width: 100%;
+  }
   .input.application {
     max-width: 100%;
   }

@@ -65,8 +65,6 @@ const accordionCards = body.querySelectorAll('.faq .card');
 const accordionQuestion = body.querySelectorAll('.faq .question');
 const phone = body.querySelectorAll('.js-phone');
 
-const scrollWidth = window.innerWidth - body.offsetWidth + 'px';
-
 const openModalWindow = (open, window) => {
     open.forEach(press => {
         press.addEventListener('click', (event) => {
@@ -74,7 +72,6 @@ const openModalWindow = (open, window) => {
 
             window.classList.add('open');
             body.classList.add('lock');
-            body.style.paddingRight = scrollWidth;
         })
     });
 };
@@ -86,7 +83,6 @@ const closeModalWindow = (close, window) => {
 
             window.classList.remove('open');
             body.classList.remove('lock');
-            body.style.paddingRight = '0px'
         })
     })
 };
@@ -98,7 +94,6 @@ const closeModalWindowOutOfField = (window) => {
             
             window.classList.remove('open');
             body.classList.remove('lock');
-            body.style.paddingRight = '0px'
         }
     });
 };
@@ -118,6 +113,7 @@ const openGoodOrBadAnswerONPages = (sends, object) => {
             event.preventDefault();
 
             object.classList.add('open');
+            body.classList.add('lock');
         })
     })
 

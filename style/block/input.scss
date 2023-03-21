@@ -93,8 +93,10 @@
 
 @media screen and (max-width: 1000px) {
     .input {
+        max-width: 100%;
+
         &.application {
             max-width: 100%;
         }
-    }
+    }   
 }
