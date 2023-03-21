@@ -1,0 +1,104 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-pale-white: #F4F4F4;
+  --color-light: #F5F6FF;
+  --color-border: #DADADA;
+  --color-dark: #303030;
+  --color-backgtound: rgba(0, 0, 0, 0.44);
+  --color-blue: #80D8E7;
+  --color-violet: #515DAD;
+  --color-light-violet: #D2D8FF;
+  --color-light-violet-hover: #CBD2FF;
+  --color-bright-purple: #6977DA;
+  --color-light-purple: #4B569D;
+  --color-gray: rgba(138, 139, 152, 0.5);
+  --colot-blue-gradient: linear-gradient(276.88deg, #90C1F3 2.65%, #72D5E3 48.22%, #DBE8FF 99.23%);
+  --colot-green-gradient: linear-gradient(0deg, #44D370, #44D370), linear-gradient(94.55deg, #4974F6 5.92%, #49DEB2 91.12%);
+  --color-green-hover: #52E27F;
+  --color-green-active: #47CC70;
+}
+
+.footer {
+  background: var(--color-white);
+  border-radius: 30px 30px 0px 0px;
+  padding-top: 67px;
+  padding-bottom: 61px;
+}
+.footer .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .menu:has(> .text) {
+  padding-top: 48px;
+}
+.footer .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 83px;
+}
+.footer .link {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-dark);
+}
+.footer .link:hover {
+  color: var(--color-violet);
+}
+.footer .contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: self-start;
+}
+.footer .phone {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-dark);
+}
+.footer .call {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-violet);
+}
+.footer .text {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-gray);
+}
+.footer .text.hover:hover {
+  color: var(--color-violet);
+}
+
+@media screen and (max-width: 1280px) {
+  .footer .list {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 23px;
+  }
+  .footer .menu {
+    flex-direction: column;
+    gap: 26px;
+  }
+  .footer .menu:has(> .text) {
+    padding-top: 26px;
+  }
+  .footer .list {
+    flex-direction: column;
+    gap: 26px;
+  }
+  .footer .call {
+    margin: 0 auto;
+  }
+  .footer .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}/*# sourceMappingURL=footer.css.map */

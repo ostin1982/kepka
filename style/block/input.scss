@@ -1,0 +1,100 @@
+@import 'color';
+@import 'font';
+
+.input {
+    border: none;
+    background: inherit;
+    width: 228px;
+
+    &::placeholder {
+        font-size: $font-p5;
+        line-height: 26px;
+        color: var(--color-gray);
+    }
+
+    &[type="tel"] {
+        font-size: $font-p5;
+        line-height: 26px;
+        color: var(--color-gray);
+    }
+
+    &.info {
+        border: 1px solid var(--color-pale-white);
+        border-radius: 10px;
+        padding: 16px 20px;
+        width: 320px;
+
+        &::placeholder {
+            font-size: $font-p6;
+            line-height: 23px;            
+            color: var(--color-pale-white);
+        }
+
+        &[type="text"] {
+            font-size: $font-p6;
+            line-height: 23px;            
+            color: var(--color-pale-white);
+        }
+
+        &[type="tel"] {
+            font-size: $font-p6;
+            line-height: 23px;            
+            color: var(--color-pale-white);
+        }
+    }
+
+    &.application {
+        width: 100%;
+        padding: 16px 20px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+
+        &::placeholder {
+            font-size: $font-p6;
+            line-height: 23px;
+            color: var(--color-gray);
+        }
+
+        &[type="text"] {
+            font-size: $font-p6;
+            line-height: 23px;
+            color: var(--color-gray);
+        }
+
+        &[type="tel"] {
+            font-size: $font-p6;
+            line-height: 23px;
+            color: var(--color-gray);
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .input {
+        &.info {
+            background: transparent;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .input {
+        padding: 15px;
+        border-radius: 10px;
+        background: var(--color-white);
+        max-width: 253px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .input {
+        &.application {
+            max-width: 100%;
+        }
+    }
+}

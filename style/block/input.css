@@ -1,0 +1,114 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-pale-white: #F4F4F4;
+  --color-light: #F5F6FF;
+  --color-border: #DADADA;
+  --color-dark: #303030;
+  --color-backgtound: rgba(0, 0, 0, 0.44);
+  --color-blue: #80D8E7;
+  --color-violet: #515DAD;
+  --color-light-violet: #D2D8FF;
+  --color-light-violet-hover: #CBD2FF;
+  --color-bright-purple: #6977DA;
+  --color-light-purple: #4B569D;
+  --color-gray: rgba(138, 139, 152, 0.5);
+  --colot-blue-gradient: linear-gradient(276.88deg, #90C1F3 2.65%, #72D5E3 48.22%, #DBE8FF 99.23%);
+  --colot-green-gradient: linear-gradient(0deg, #44D370, #44D370), linear-gradient(94.55deg, #4974F6 5.92%, #49DEB2 91.12%);
+  --color-green-hover: #52E27F;
+  --color-green-active: #47CC70;
+}
+
+.input {
+  border: none;
+  background: inherit;
+  width: 228px;
+}
+.input::-moz-placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--color-gray);
+}
+.input::placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--color-gray);
+}
+.input[type=tel] {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--color-gray);
+}
+.input.info {
+  border: 1px solid var(--color-pale-white);
+  border-radius: 10px;
+  padding: 16px 20px;
+  width: 320px;
+}
+.input.info::-moz-placeholder {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-pale-white);
+}
+.input.info::placeholder {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-pale-white);
+}
+.input.info[type=text] {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-pale-white);
+}
+.input.info[type=tel] {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-pale-white);
+}
+.input.application {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+.input.application::-moz-placeholder {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-gray);
+}
+.input.application::placeholder {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-gray);
+}
+.input.application[type=text] {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-gray);
+}
+.input.application[type=tel] {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-gray);
+}
+
+@media screen and (max-width: 1200px) {
+  .input.info {
+    background: transparent;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .input {
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--color-white);
+    max-width: 253px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .input.application {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=input.css.map */

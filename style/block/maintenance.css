@@ -1,0 +1,231 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-pale-white: #F4F4F4;
+  --color-light: #F5F6FF;
+  --color-border: #DADADA;
+  --color-dark: #303030;
+  --color-backgtound: rgba(0, 0, 0, 0.44);
+  --color-blue: #80D8E7;
+  --color-violet: #515DAD;
+  --color-light-violet: #D2D8FF;
+  --color-light-violet-hover: #CBD2FF;
+  --color-bright-purple: #6977DA;
+  --color-light-purple: #4B569D;
+  --color-gray: rgba(138, 139, 152, 0.5);
+  --colot-blue-gradient: linear-gradient(276.88deg, #90C1F3 2.65%, #72D5E3 48.22%, #DBE8FF 99.23%);
+  --colot-green-gradient: linear-gradient(0deg, #44D370, #44D370), linear-gradient(94.55deg, #4974F6 5.92%, #49DEB2 91.12%);
+  --color-green-hover: #52E27F;
+  --color-green-active: #47CC70;
+}
+
+.maintenance {
+  padding-top: 33px;
+  padding-bottom: 48px;
+}
+.maintenance .wrapper {
+  position: relative;
+  background: url("../../img/back-back.png") no-repeat center;
+  max-width: 100%;
+  width: 100%;
+  height: 526px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.maintenance .wrapper::before {
+  position: absolute;
+  content: "";
+  background: url("../../img/man-man.png") no-repeat;
+  bottom: 0;
+  right: 74px;
+  width: 311px;
+  height: 561px;
+}
+.maintenance .info {
+  width: 611px;
+  padding-top: 53px;
+  padding-left: 59px;
+}
+.maintenance .title {
+  font-family: "Jost", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 41px;
+  line-height: 133.5%;
+  color: var(--color-dark);
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.4s ease 0s;
+}
+.maintenance .title.active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+.maintenance .subtitle {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 38px;
+  color: var(--color-dark);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.maintenance .subtitle.active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.4s;
+}
+.maintenance .form {
+  width: 500px;
+  padding: 10px 15px;
+  background: var(--color-white);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.maintenance .service {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 13px;
+  gap: 90px;
+  max-width: 800px;
+  width: 100%;
+  transform: translate(-10%, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.maintenance .service.active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 0.8s ease 0.4s;
+}
+.maintenance .card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.maintenance .img {
+  margin-right: 15px;
+  min-width: 44px;
+  min-height: 44px;
+}
+.maintenance .text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--color-dark);
+}
+.maintenance .man {
+  display: none;
+}
+
+@media screen and (max-width: 1124px) {
+  .maintenance .wrapper {
+    background: url("../../img/back-back-1024.png") no-repeat center;
+  }
+  .maintenance .wrapper::before {
+    position: absolute;
+    content: "";
+    background: url("../../img/man-man-1024.png") no-repeat;
+    bottom: 18px;
+    right: 26px;
+    width: 289px;
+    height: 521px;
+  }
+  .maintenance .info {
+    width: 452px;
+    padding-top: 63px;
+  }
+  .maintenance .title {
+    font-size: 30px;
+    line-height: 43px;
+  }
+  .maintenance .service {
+    gap: 38px;
+    max-width: 666px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .maintenance .wrapper {
+    background: none;
+    height: auto;
+  }
+  .maintenance .wrapper::before {
+    display: none;
+  }
+  .maintenance .info {
+    background: var(--colot-blue-gradient);
+    border-radius: 20px;
+    width: 100%;
+    padding: 61px 14px;
+  }
+  .maintenance .title {
+    font-size: 20px;
+    line-height: 29px;
+  }
+  .maintenance .subtitle {
+    padding: 25px 0 22px 0;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .maintenance .form {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    flex-direction: column;
+  }
+  .maintenance .service {
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: auto;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    max-width: 100%;
+  }
+  .maintenance .service::-webkit-scrollbar {
+    width: 0;
+  }
+  .maintenance .card {
+    min-width: 212px;
+    width: 100%;
+  }
+  .maintenance .man {
+    display: block;
+    position: relative;
+    background: linear-gradient(314.05deg, rgba(114, 213, 227, 0.56) 1.83%, #DBE8FF 90.9%);
+    width: 100%;
+    border-radius: 20px;
+    height: 346px;
+  }
+  .maintenance .man::before {
+    position: absolute;
+    content: "";
+    background: url("../../img/man-man-768.png") no-repeat;
+    bottom: 0;
+    right: calc(50% - 107px);
+    width: 213px;
+    height: 385px;
+    z-index: 1;
+  }
+  .maintenance .pattern {
+    position: relative;
+    overflow: hidden;
+    height: 346px;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .maintenance .pattern::before {
+    position: absolute;
+    content: "";
+    background: url("../../img/pattern-pattern.png") no-repeat;
+    bottom: 0;
+    right: calc(50% - 464px);
+    width: 724px;
+    height: 351px;
+  }
+}/*# sourceMappingURL=maintenance.css.map */

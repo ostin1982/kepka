@@ -1,0 +1,135 @@
+@import 'color';
+@import 'font';
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background: var(--color-backgtound);
+    opacity: 0;
+    z-index: 100;
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 47px 49px;
+        width: 563px;
+        height: auto;
+        border-radius: 20px;
+        background: var(--color-white);
+
+        &:has(> .upload) {
+            width: calc(100vw - 32px);
+            height: calc(100vh - 32px);;
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 19px;
+        right: 19px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .title {
+        width: 100%;
+        font-weight: 700;
+        font-size: $font-h2;
+        line-height: 43px;
+        text-align: center;
+        color: var(--color-dark);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 360px;
+        margin: 0 auto;
+        gap: 16px;
+        padding-top: 31px;
+        padding-bottom: 10px;
+    }
+    
+    .subtitle {
+        font-size: $font-p7;
+        line-height: 20px;
+        text-align: center;
+        color: var(--color-gray);
+        width: 286px;
+        margin: 0 auto;
+    }
+
+    .upload {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .module {
+        position: relative;
+        overflow-y: scroll;
+        max-height: calc(100% - 49px);
+        height: 100%;
+        margin-top: 30px;
+    }
+
+    .text {
+        font-size: $font-p6;
+        line-height: 23px;
+        color: var(--color-dark);
+        padding-bottom: 6px;
+
+        &:has(> b) {
+            font-size: $font-p5;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        .close {
+            top: 6px;
+            right: 6px;
+        }
+
+        .wrapper {
+            width: calc(100% - 32px);
+            padding: 39px 12px;
+        }
+
+        .title {
+            font-size: $font-p5;
+            line-height: 26px;
+        }
+
+        .subtitle {
+            font-size: $font-p8;
+            line-height: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .modal {
+        .form {
+            width: 100%;
+        }
+    }
+}

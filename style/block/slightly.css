@@ -1,0 +1,107 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-pale-white: #F4F4F4;
+  --color-light: #F5F6FF;
+  --color-border: #DADADA;
+  --color-dark: #303030;
+  --color-backgtound: rgba(0, 0, 0, 0.44);
+  --color-blue: #80D8E7;
+  --color-violet: #515DAD;
+  --color-light-violet: #D2D8FF;
+  --color-light-violet-hover: #CBD2FF;
+  --color-bright-purple: #6977DA;
+  --color-light-purple: #4B569D;
+  --color-gray: rgba(138, 139, 152, 0.5);
+  --colot-blue-gradient: linear-gradient(276.88deg, #90C1F3 2.65%, #72D5E3 48.22%, #DBE8FF 99.23%);
+  --colot-green-gradient: linear-gradient(0deg, #44D370, #44D370), linear-gradient(94.55deg, #4974F6 5.92%, #49DEB2 91.12%);
+  --color-green-hover: #52E27F;
+  --color-green-active: #47CC70;
+}
+
+.slightly {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.slightly .wrapper {
+  background: var(--color-white);
+  border-radius: 30px;
+  padding: 48px 74px 72px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transform: translate(-10%, 0);
+  opacity: 0;
+  transition: all 1.2s ease 0s;
+}
+.slightly .wrapper.active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+.slightly .info {
+  max-width: 450px;
+  width: 100%;
+}
+.slightly .title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 43px;
+  color: var(--color-dark);
+  padding-bottom: 35px;
+}
+.slightly .subtitle {
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--color-dark);
+  padding-bottom: 10px;
+}
+.slightly .subtitle:last-child {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .slightly {
+    padding-top: 50px;
+  }
+  .slightly .picture {
+    max-width: 433px;
+    width: 100%;
+  }
+  .slightly .img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .slightly .info {
+    max-width: 35vw;
+  }
+  .slightly .title {
+    font-size: 24px;
+    line-height: 35px;
+    padding-bottom: 30px;
+  }
+  .slightly .subtitle {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .slightly {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .slightly .wrapper {
+    flex-direction: column-reverse;
+    gap: 31px;
+    padding: 25px 13px;
+  }
+  .slightly .picture {
+    max-width: 100%;
+  }
+  .slightly .info {
+    max-width: 100%;
+  }
+  .slightly .title {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}/*# sourceMappingURL=slightly.css.map */

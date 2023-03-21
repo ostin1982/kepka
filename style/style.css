@@ -1,0 +1,13 @@
+@import 'block/body.css';
+@import 'block/container.css';
+@import 'block/input.css';
+@import 'block/button.css';
+@import 'block/header.css';
+@import 'block/maintenance.css';
+@import 'block/choice.css';
+@import 'block/slightly.css';
+@import 'block/pricing.css';
+@import 'block/faq.css';
+@import 'block/information.css';
+@import 'block/footer.css';
+@import 'block/modal.css';

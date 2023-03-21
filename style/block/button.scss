@@ -1,0 +1,51 @@
+@import 'color';
+@import 'font';
+
+.button {
+    position: relative;
+    background: var(--colot-green-gradient);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: $font-p6;
+    line-height: 23px;
+    text-align: center;
+    color: var(--color-white);
+    padding-top: 17px;
+    padding-bottom: 17px;
+    width: 250px;
+    z-index: 2;
+
+    &:hover {
+        background: var(--color-green-hover);
+    }
+
+    &:active {
+        background: var(--color-green-active);
+    }
+
+    &.application {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .button {
+        &.info {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .button {
+        &.call {
+            width: 199px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .button {
+        width: 253px;
+    }
+}

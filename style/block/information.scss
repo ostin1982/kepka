@@ -1,0 +1,137 @@
+@import 'color';
+@import 'font';
+
+.information {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    .wrapper {
+        position: relative;
+        padding: 56px 54px;
+        background: var(--color-violet);
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        transform: translate(-10%, 0);
+        opacity: 0;
+        transition: all 0.4s ease 0s;
+
+        &.active {
+            opacity: 1;
+            transform: translate(0px, 0px);
+            transition: all 0.8s ease 0.4s;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 724px;
+            height: 351px;
+            background: url('../../img/pattern-pattern.png') no-repeat;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: $font-h0;
+        line-height: 64px;
+        color: var(--color-pale-white);
+    }
+
+    .subtitle {
+        font-size: $font-p3;
+        line-height: 140%;
+        color: var(--color-pale-white);
+        padding-top: 14px;
+    }
+
+    .phone {
+        font-weight: 700;
+        font-size: $font-p3;
+        line-height: 140%;
+        color: var(--color-pale-white);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: self-start;
+        gap: 25px;
+    }
+
+    .send {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 11px;
+    }
+
+    .approval {
+        font-size: $font-p8;
+        line-height: 14px;
+        color: var(--color-light-violet);
+        width: 135px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .information  {
+        padding-top: 110px;
+        padding-bottom: 110px;
+
+        .title {
+            font-size: $font-h3;
+            line-height: 52px;
+        }
+
+        .send {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .approval {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .information  {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .wrapper {
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px 13px;
+        }
+
+        .consultation {
+            width: 100%;
+        }
+
+        .title {
+            font-size: $font-p4;
+            line-height: 29px;
+        }
+
+        .subtitle {
+            font-size: $font-p6;
+            line-height: 156%;
+            padding-top: 22px;
+        }
+
+        .form {
+            width: 100%;
+        }
+
+        .approval {
+            display: none;
+        }
+    }
+}
