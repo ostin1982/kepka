@@ -40,7 +40,7 @@
                         </li>
                         <li class="mobile">
                             <a href="tel: +74952662950" class="phone">+7 (495) 266-29-50</a>
-                            <button class="button js-call">Закзать ремонт</button>
+                            <button class="button js-call">Заказать ремонт</button>
                         </li>
                     </ul>
                 </nav>
@@ -63,7 +63,7 @@
                     <p class="subtitle js-animation js-not-animation">Ремонт в день обращения с гарантией 1 год на все услуги</p>
                     <form action="" class="form">
                         <input type="tel" class="input js-phone" placeholder="+7 (___) ___-__-__">
-                        <button class="button">Заказать ремонет</button>
+                        <button class="button js-send">Заказать ремонет</button>
                     </form>
                 </div>
                 <div class="service js-animation js-not-animation">
@@ -542,7 +542,7 @@
                     <input type="text" class="input info" placeholder="Имя">
                     <input type="tel" class="input info js-phone" placeholder="Номер телефона">
                     <div class="send">
-                        <button class="button info">Отправить</button>
+                        <button class="button info js-send">Отправить</button>
                         <p class="approval">Отправляя форму, вы даёте согласие на обработку персональных данных</p>
                     </div>
                 </div>
@@ -599,7 +599,7 @@
             <form action="" class="form">
                 <input type="text" class="input application" placeholder="Ваше имя">
                 <input type="tel" class="input application js-phone" placeholder="Номер телефона">
-                <button class="button application">Отправить заявку</button>
+                <button class="button application js-answer">Отправить заявку</button>
             </form>
             <p class="subtitle">Отправляя форму, вы даёте согласие на обработку персональных данных</p>
         </div>
@@ -614,6 +614,30 @@
             <div class="upload">
 
             </div>
+        </div>
+    </div>
+    <div class="modal js-modal-good">
+        <div class="wrapper">
+            <a href="#" class="close js-modal-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                    <path stroke="#8A8B98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6 6 18M6 6l12 12"/>
+                </svg>
+            </a>
+            <p class="title">Заявка отправлена</p>
+            <p class="well">Наш менеджер перезвонит вам в течение 15 минут</p>
+            <button class="button application js-modal-close">Жду звонка</button>
+        </div>
+    </div>
+    <div class="modal js-modal-bad">
+        <div class="wrapper">
+            <a href="#" class="close js-modal-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                    <path stroke="#8A8B98" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6 6 18M6 6l12 12"/>
+                </svg>
+            </a>
+            <p class="title error">Ой! Какая-то ошибка</p>
+            <p class="well">Видимо вы неверно ввели данные, попробуйте еще раз!</p>
+            <button class="button application js-modal-close">Попробую еще</button>
         </div>
     </div>
     <script src="script/script.js"></script>

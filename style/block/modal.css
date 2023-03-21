@@ -16,6 +16,7 @@
   --colot-green-gradient: linear-gradient(0deg, #44D370, #44D370), linear-gradient(94.55deg, #4974F6 5.92%, #49DEB2 91.12%);
   --color-green-hover: #52E27F;
   --color-green-active: #47CC70;
+  --color-error: #C32626;
 }
 
 .modal {
@@ -67,6 +68,9 @@
   text-align: center;
   color: var(--color-dark);
 }
+.modal .title.error {
+  color: var(--color-error);
+}
 .modal .form {
   display: flex;
   flex-direction: column;
@@ -106,6 +110,14 @@
 }
 .modal .text:has(> b) {
   font-size: 18px;
+}
+.modal .well {
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--color-dark);
+  padding-top: 13px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

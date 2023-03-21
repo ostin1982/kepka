@@ -55,6 +55,10 @@ const modalForm = body.querySelector('.js-modal-form');
 const openModalPolitics = body.querySelectorAll('.js-politics');
 const modalPolitics = body.querySelector('.js-modal-politics');
 const upload = body.querySelector('.upload');
+const modalGood = body.querySelector('.js-modal-good');
+const modalBad = body.querySelector('.js-modal-bad');
+const modalAnswer = body.querySelector('.js-answer');
+const sendAnswers = body.querySelectorAll('.js-send');
 const pricingLinks = body.querySelectorAll('.pricing .link');
 const pricingBlocks = body.querySelectorAll('.pricing .block');
 const accordionCards = body.querySelectorAll('.faq .card');
@@ -99,6 +103,26 @@ const closeModalWindowOutOfField = (window) => {
     });
 };
 
+const openGoodOrBadAnswer = (close, object, object2) => {
+    close.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        object.classList.remove('open');
+        object2.classList.add('open');
+    })
+}
+
+const openGoodOrBadAnswerONPages = (sends, object) => {
+    sends.forEach(send => {
+        send.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            object.classList.add('open');
+        })
+    })
+
+}
+
 openModalWindow(openModalForm, modalForm);
 closeModalWindow(closeModals, modalForm);
 closeModalWindowOutOfField(modalForm);
@@ -106,6 +130,20 @@ closeModalWindowOutOfField(modalForm);
 openModalWindow(openModalPolitics, modalPolitics);
 closeModalWindow(closeModals, modalPolitics);
 closeModalWindowOutOfField(modalPolitics); 
+
+// Открытие-закрытие модал с положительным ответом если через откртыие модалки с формой
+openGoodOrBadAnswer(modalAnswer, modalForm, modalGood);
+closeModalWindow(closeModals, modalGood);
+closeModalWindowOutOfField(modalGood); 
+// Открытие-закрытие модал с положительным ответом если через формц с сайта
+openGoodOrBadAnswerONPages(sendAnswers, modalGood)
+
+// Открытие-закрытие модал с отрицательным ответом если через откртыие модалки с формой
+//openGoodOrBadAnswer(modalAnswer, modalForm, modalBad);
+//closeModalWindow(closeModals, modalBad);
+//closeModalWindowOutOfField(modalBad); 
+// Открытие-закрытие модал с отрицательным ответом если через формц с сайта
+//openGoodOrBadAnswerONPages(sendAnswers, modalBad);
 
 openModalPolitics.forEach(openModalPolitic => {
     openModalPolitic.addEventListener('click', () => {

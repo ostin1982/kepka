@@ -53,6 +53,10 @@
         line-height: 43px;
         text-align: center;
         color: var(--color-dark);
+
+        &.error {
+            color: var(--color-error);
+        }
     }
 
     .form {
@@ -99,6 +103,15 @@
         &:has(> b) {
             font-size: $font-p5;
         }
+    }
+
+    .well {
+        font-size: $font-p3;
+        line-height: 32px;
+        color: var(--color-dark);
+        padding-top: 13px;
+        padding-bottom: 30px;
+        text-align: center;
     }
 }
 
